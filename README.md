@@ -57,6 +57,24 @@ pip install -r python/chat-app/requirements.txt
 4. Configure your Azure AI Foundry endpoint and model deployment.
 5. Continue implementing the application.
 
+## Configuration
+
+Create a `.env` file inside the `python/chat-app` directory by copying the values from `.env.example`.
+
+Update the following settings with your Azure AI Foundry configuration:
+
+* **AZURE_OPENAI_ENDPOINT** – The Azure OpenAI endpoint from your Azure AI Foundry project.
+* **MODEL_DEPLOYMENT** – The deployment name of your GPT model.
+
+Example:
+
+```text
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/openai/v1/
+MODEL_DEPLOYMENT=gpt-5.2
+```
+
+The `.env` file contains project-specific configuration and should never be committed to source control.
+
 ## Development Roadmap
 
 * Configure Azure authentication
