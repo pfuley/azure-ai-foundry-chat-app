@@ -6,19 +6,19 @@ This project demonstrates how to build a conversational AI application with the 
 
 ## Current Status
 
-**Commit 1 – Initial Project Setup**
-
-This commit establishes the project foundation.
+Commit 3 – Azure OpenAI Client Initialization
 
 Completed:
 
-* Cloned the Microsoft Learn repository
-* Set up the Python development environment
-* Created a Python virtual environment
-* Installed the required project dependencies
-* Prepared the project structure for development
+Cloned the Microsoft Learn repository.
+Set up the Python development environment.
+Created a Python virtual environment.
+Installed the required project dependencies.
+Configured the application environment.
+Added the Azure OpenAI SDK and Azure Identity imports.
+Initialized the Azure OpenAI client using Microsoft Entra ID authentication.
 
-No application functionality has been implemented yet.
+The application is now configured to authenticate with Azure AI Foundry. In the next commit, the chat application will send prompts to the deployed model and display AI-generated responses.
 
 ## Technology Stack
 
