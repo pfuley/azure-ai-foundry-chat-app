@@ -26,6 +26,8 @@ def main():
             api_key=token_provider
         )
 
+        # Track responses
+        last_response_id = None
         # Loop until the user wants to quit
         while True:
             input_text = input('\nEnter a prompt (or type "quit" to exit): ')
@@ -39,9 +41,11 @@ def main():
             response = openai_client.responses.create(
                 model=model_deployment,
                 instructions="You are a helpful AI assistant that answers questions and provides information.",
-                input=input_text
+                input=input_text,
+                previous_response_id=last_response_id
             )
             print(response.output_text)
+            last_response_id = response.id
 
     except Exception as ex:
         print(ex)

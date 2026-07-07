@@ -8,24 +8,29 @@ This project follows the Microsoft Learn **Create a Generative AI Chat App** lab
 
 # Current Status
 
-**Commit 5 – Responses API**
+**Commit 6 – Conversation Tracking**
 
 Completed:
 
-* Cloned the Microsoft Learn repository.
 * Configured the Python development environment.
-* Created a virtual environment.
 * Installed project dependencies.
-* Configured the application environment.
+* Configured Azure AI Foundry environment variables.
 * Initialized the Azure OpenAI client.
 * Implemented Microsoft Entra ID authentication.
 * Implemented the Chat Completions API.
-* Migrated the application to the Responses API.
-* Successfully authenticated using Azure CLI.
-* Verified communication with a deployed GPT model.
-* Tested the application using the Responses API.
+* Migrated the app to the Responses API.
+* Added conversation tracking using the previous response ID.
 
-The application now uses the newer Responses API, which provides a simpler interface for interacting with GPT models. Conversation history is not yet maintained between requests and will be implemented in the next stage.
+The application can now maintain conversational context between prompts. This allows follow-up questions to refer to earlier responses in the same session.
+
+Example:
+
+```text
+User: Tell me about the ELIZA chatbot.
+User: How does it compare to modern LLMs?
+```
+
+The second question can now use the context from the first response.
 
 ---
 
