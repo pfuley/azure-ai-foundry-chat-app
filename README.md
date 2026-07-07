@@ -2,30 +2,30 @@
 
 A Python-based chat application built using Azure AI Foundry and the OpenAI Python SDK.
 
-This project follows the Microsoft Learn **Create a Generative AI Chat App** lab and is being developed incrementally to demonstrate the complete development process of building a conversational AI application.
+This project follows the Microsoft Learn **Create a Generative AI Chat App** lab and is being developed incrementally to demonstrate modern AI application development with Azure AI Foundry.
 
 ---
 
 # Current Status
 
-**Commit 4 – Chat Completions API**
+**Commit 5 – Responses API**
 
 Completed:
 
 * Cloned the Microsoft Learn repository.
 * Configured the Python development environment.
 * Created a virtual environment.
-* Installed all required dependencies.
-* Configured the application using environment variables.
+* Installed project dependencies.
+* Configured the application environment.
 * Initialized the Azure OpenAI client.
-* Implemented authentication using Microsoft Entra ID.
+* Implemented Microsoft Entra ID authentication.
 * Implemented the Chat Completions API.
-* Authenticated successfully using Azure CLI (`az login`).
-* Successfully connected to the deployed GPT model in Azure AI Foundry.
-* Verified end-to-end communication by asking the model about the ELIZA chatbot.
-* Successfully terminated the application using the `quit` command.
+* Migrated the application to the Responses API.
+* Successfully authenticated using Azure CLI.
+* Verified communication with a deployed GPT model.
+* Tested the application using the Responses API.
 
-The application is now capable of sending prompts to a deployed GPT model and displaying AI-generated responses.
+The application now uses the newer Responses API, which provides a simpler interface for interacting with GPT models. Conversation history is not yet maintained between requests and will be implemented in the next stage.
 
 ---
 
@@ -59,13 +59,13 @@ foundry-chat/
 
 # Getting Started
 
-## 1. Create a virtual environment
+## Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-## 2. Activate the virtual environment
+## Activate the virtual environment
 
 Windows
 
@@ -73,13 +73,13 @@ Windows
 .venv\Scripts\activate
 ```
 
-## 3. Install dependencies
+## Install dependencies
 
 ```bash
 pip install -r python/chat-app/requirements.txt
 ```
 
-## 4. Configure the application
+## Configure the application
 
 Create a `.env` file inside `python/chat-app` using `.env.example`.
 
@@ -88,13 +88,13 @@ Configure:
 * Azure OpenAI Endpoint
 * Model Deployment Name
 
-## 5. Authenticate with Azure
+## Authenticate with Azure
 
 ```bash
 az login
 ```
 
-## 6. Run the application
+## Run the application
 
 ```bash
 python chat-app.py
@@ -106,20 +106,18 @@ python chat-app.py
 
 * Azure authentication using Microsoft Entra ID
 * Azure OpenAI client initialization
-* Chat Completions API integration
+* Responses API integration
 * Interactive command-line chat interface
 * GPT model response generation
 
 ---
 
-# Development Roadmap
+# Upcoming Improvements
 
-* Migrate to the Responses API
-* Add conversation history
-* Implement streaming responses
-* Build an asynchronous chat client
-* Improve documentation
-* Final project polish
+* Maintain conversation history
+* Stream AI responses
+* Add asynchronous implementation
+* Final project documentation
 
 ---
 
@@ -128,11 +126,11 @@ python chat-app.py
 This project demonstrates practical experience with:
 
 * Azure AI Foundry
-* Azure authentication
 * OpenAI Python SDK
-* Chat Completions API
+* Microsoft Entra ID authentication
+* Responses API
 * Python virtual environments
-* Building command-line AI applications
+* Command-line AI applications
 
 ---
 
