@@ -8,7 +8,7 @@ This project follows the Microsoft Learn **Create a Generative AI Chat App** lab
 
 # Current Status
 
-**Commit 6 – Conversation Tracking**
+**Commit 7 – Streaming Responses**
 
 Completed:
 
@@ -18,19 +18,11 @@ Completed:
 * Initialized the Azure OpenAI client.
 * Implemented Microsoft Entra ID authentication.
 * Implemented the Chat Completions API.
-* Migrated the app to the Responses API.
-* Added conversation tracking using the previous response ID.
+* Migrated the application to the Responses API.
+* Added conversation tracking.
+* Implemented streaming responses.
 
-The application can now maintain conversational context between prompts. This allows follow-up questions to refer to earlier responses in the same session.
-
-Example:
-
-```text
-User: Tell me about the ELIZA chatbot.
-User: How does it compare to modern LLMs?
-```
-
-The second question can now use the context from the first response.
+The application now displays AI-generated text incrementally as it is produced, providing a faster and more responsive chat experience while preserving conversation context.
 
 ---
 
